@@ -1,0 +1,87 @@
+
+body{
+    background-color:#fff ;
+    background-size: cover;
+    margin-top: 25px;
+    padding: 50px;
+}
+
+header {
+    background-color: rgb(161, 218, 142);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    font-size: x-large;
+    padding: 5px;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+}  
+header .home{
+    position: absolute;
+    display: flex;
+    margin-left: 40%;
+    margin-right:60% ;
+    color: black;
+    background-color: rgb(161, 218, 142);
+    border-radius: 20%;
+    text-decoration: none;
+    
+}
+.home:hover{
+    background-color: rgb(255, 255, 255);
+}
+header .accounting{
+    
+    position: absolute;
+    margin-left: 60%;
+    margin-right: 40%;
+    color: black;
+    background-color: rgb(161, 218, 142);
+    border-radius: 20%;
+    text-decoration: none;
+}
+.accounting:hover{
+    background-color: rgb(255, 255, 255);
+}
+
+.footer {
+    background-color: rgb(161, 218, 142);
+    position: fixed;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    font-size: x-small;
+    padding: 5px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+}
+
+.footer p {
+    margin-bottom: 15px; 
+}
+
+.footer .media-butons {
+    height: 50px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+.media-butons .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    margin: 0 8px;
+    text-decoration: none;
+}
