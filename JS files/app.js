@@ -1,7 +1,7 @@
 'use strict'
 let employeesInfo=[];
 
-function Constructor (employeeId,fullNaame,department,level,img,salary){
+function Employees (employeeId,fullNaame,department,level,img,salary){
     this.employeeId=employeeId;
     this.fullNaame=fullNaame;
     this.department=department;
@@ -11,7 +11,7 @@ function Constructor (employeeId,fullNaame,department,level,img,salary){
     employeesInfo.push(this);
 
 }
-Constructor.prototype.randomSalary=function(){
+Employees.prototype.randomSalary=function(){
     
     if (this.level=="Senior"){
         this.salary= Math.floor(Math.random() * (2000 - 1500 + 1)) + 1500;
@@ -28,11 +28,11 @@ Constructor.prototype.randomSalary=function(){
 
 
 }
-Constructor.prototype.netSalary =function(){
+Employees.prototype.netSalary =function(){
     return this.randomSalary() - (this.randomSalary()*(7.5/100));
 }
 
-Constructor.prototype.employeeNameAndSalary=function(){
+Employees.prototype.employeeNameAndSalary=function(){
     document.write(`<p> Full Name: ${this.fullNaame} </p>`)
     document.write(`<p> Salary: ${this.netSalary()} </p>`)
 
@@ -40,13 +40,13 @@ Constructor.prototype.employeeNameAndSalary=function(){
 
 
 
-let employee0=new Constructor(1000,"Ghazi Samer","Administration","Senior");
-let employee1=new Constructor(1001,"Lana Ali","Finance","Senior");
-let employee2=new Constructor(1002,"Tamara Ayoub","Marketing","Senior");
-let employee3=new Constructor(1003,"Safi Walid","Administration","Mid-Senior");
-let employee4=new Constructor(1004,"Omar Zaid","Development","Senior");
-let employee5=new Constructor(1005,"Rana Saleh","Development","Junior");
-let employee6=new Constructor(1006,"Hadi Ahmad ","Finance","Mid-Senior");
+let employee0=new Employees(1000,"Ghazi Samer","Administration","Senior");
+let employee1=new Employees(1001,"Lana Ali","Finance","Senior");
+let employee2=new Employees(1002,"Tamara Ayoub","Marketing","Senior");
+let employee3=new Employees(1003,"Safi Walid","Administration","Mid-Senior");
+let employee4=new Employees(1004,"Omar Zaid","Development","Senior");
+let employee5=new Employees(1005,"Rana Saleh","Development","Junior");
+let employee6=new Employees(1006,"Hadi Ahmad ","Finance","Mid-Senior");
 
 for(let i=0;i<employeesInfo.length;i++){
     employeesInfo[i].employeeNameAndSalary();
