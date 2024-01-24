@@ -1,14 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
 
-body{
-    height: 100vh;
-    background-color:#fff ;
+body {
+    height: 2000hv;
     background-size: cover;
-    margin-top: 25px;
+    margin-top: 80px; 
     padding: 50px;
 }
 
+main {
+    height: 1000hv;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.department-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; 
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    max-width: 230px; 
+    width: 100%;
+    background-color: #C8C6A7;
+    border-radius: 12px; 
+    padding: 15px; 
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    margin: 10px; 
+    z-index: 1;
+}
+
+.profile-card img {
+    width: 100%; 
+    border-radius: 50%; 
+    margin-bottom: 10px; 
+}
+.profile-card p {
+    font-size: 14px; 
+    margin-bottom: 5px; 
+    display: flex;
+    align-items: center;
+    
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#employeeForm {
+    max-width: 300px;
+    margin: 20px auto;
+    margin-bottom: 100px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    z-index: 2; 
+}
+#employeeForm label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+
 header {
-    background-color: rgb(161, 218, 142);
+    background-color: #435560;
     position: fixed;
     display: flex;
     align-items: center;
@@ -17,53 +88,58 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    height: 60px;
-}  
-header .home{
+    height: 80px;
+    z-index: 2;
+}
+
+header .home {
     position: absolute;
     display: flex;
     margin-left: 40%;
-    margin-right:60% ;
-    color: black;
-    background-color: rgb(161, 218, 142);
+    margin-right: 60%;
+    color: #d7d5de;
+    background-color: #435560;
     border-radius: 20%;
     text-decoration: none;
-    
 }
-.home:hover{
+
+.home:hover {
     background-color: rgb(255, 255, 255);
 }
-header .accounting{
-    
+
+header .accounting {
     position: absolute;
     margin-left: 60%;
     margin-right: 40%;
-    color: black;
-    background-color: rgb(161, 218, 142);
+    color: #d7d5de;
+    background-color: #435560;
     border-radius: 20%;
     text-decoration: none;
 }
-.accounting:hover{
+
+.accounting:hover {
     background-color: rgb(255, 255, 255);
 }
 
 .footer {
-    background-color: rgb(161, 218, 142);
+    background-color: #435560;
     position: fixed;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: x-small;
-    padding: 5px;
+    padding: 0px;
     bottom: 0;
     left: 0;
     right: 0;
     height: 100px;
+    z-index: 2;
 }
 
 .footer p {
-    margin-bottom: 15px; 
+    margin-bottom: 15px;
+    color: #d7d5de;
 }
 
 .footer .media-butons {
@@ -71,7 +147,7 @@ header .accounting{
     width: 180px;
     display: flex;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
 
 .media-butons .link {
