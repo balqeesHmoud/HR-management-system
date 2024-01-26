@@ -17,46 +17,54 @@
         </nav>
     </header>
     <main>
+        <h1>Employees information</h1>
+
+            <section id="administration" class="section">
+              
+            </section>
+
+            <section id="marketing" class="section">
+              
+            </section>
+            <section id="development" class="section">
+              
+            </section>
+            <section id="finance" class="section">
+              
+            </section>
+
+
+            <form id="employeeForm">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
         
-        <section id="administration" class="department-section">
-            <h2>Administration</h2>
-        </section>
-        <section id="marketing" class="department-section">
-            <h2>Marketing</h2>
-        </section>
-        <section id="development" class="department-section">
-            <h2>Development</h2>
-        </section>
-        <section id="finance" class="department-section">
-            <h2>Finance</h2>
-        </section>
-     </main>
-    <form id="employeeForm">
-        <label for="fullName">Full Name:</label>
-        <input type="text" id="fullName" name="fullName" required>
+                <label for="department">Department:</label>
+                <select id="department" name="department" required>
+                    
+                    <option value="" disabled selected>Select Department</option>
+                    <option value="Administration">Administration</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Development">Development</option>
+                    <option value="Finance">Finance</option>
+                </select>
+        
+                <label for="level">Level:</label>
+                <select id="level" name="level" required>
+                    <option value="" disabled selected>Select Level</option>
+                    <option value="Junior">Junior</option>
+                    <option value="Mid-Senior">Mid-Senior</option>
+                    <option value="Senior">Senior</option>
+                </select>
+        
+                <label for="imageUrl">Image URL:</label>
+                <input type="text" id="imageUrl" name="imageUrl" required>
+        
+                <button type="submit">Submit</button>
+                </form>
+        </main>
+          
 
-        <label for="department">Department:</label>
-        <select id="department" name="department" required>
-            
-            <option value="" disabled selected>Select Department</option>
-            <option value="Administration">Administration</option>
-            <option value="Marketing">Marketing</option>
-            <option value="Development">Development</option>
-            <option value="Finance">Finance</option>
-        </select>
-
-        <label for="level">Level:</label>
-        <select id="level" name="level" required>
-            <option value="" disabled selected>Select Level</option>
-            <option value="Junior">Junior</option>
-            <option value="Mid-Senior">Mid-Senior</option>
-            <option value="Senior">Senior</option>
-        </select>
-
-        <label for="imageUrl">Image URL:</label>
-        <input type="text" id="imageUrl" name="imageUrl" required>
-
-        <button type="submit">Submit</button>
+    
     <footer class="footer">
         <p>© This website powered by prep-student cours.</p>
         <div class="media-butons">
