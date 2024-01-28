@@ -110,24 +110,8 @@ Employees.prototype.employeeInformation = function () {
 
 };
 
-let employeeForm=document.getElementById("employeeForm")
-    //get data from the form
-    employeeForm.addEventListener("submit",submetListener)
-    function submetListener(event){
-        event.preventDefault();
-        let fullName = event.target.querySelector('#fullName').value;
-        let department = event.target.querySelector('#department').value;
-        let level = event.target.querySelector('#level').value;
-        let imageUrl = event.target.querySelector('#imageUrl').value;
-        let newEmployee = new Employees(generateEmployeeId(), fullName, department, level, imageUrl, null);
-        newEmployee.employeeInformation();
 
 
-}
-
-function generateEmployeeId() {
-     return Math.floor(Math.random() * (9999 - 1000 + 1)) + 1000;
- }
 
 
 
@@ -139,7 +123,54 @@ let employee4=new Employees(1004,"Omar Zaid","Development","Senior","./images/em
 let employee5=new Employees(1005,"Rana Saleh","Development","Junior","./images/employee.png");
 let employee6=new Employees(1006,"Hadi Ahmad ","Finance","Mid-Senior","./images/employee.png");
 
-for(let i=0;i<employeesInfo.length;i++){
-    employeesInfo[i].employeeInformation();
+//creat function to save my data in local storage 
+function saveData(data){
+    let stringArr = JSON.stringify(data)
+    localStorage.setItem("employee",stringArr)
 
 }
+
+
+//creat function to get data from local storage
+function getData(){
+    let reteivedArr = localStorage.getItem("employee")
+    if(reteivedArr){
+    let objArr =JSON.parse(reteivedArr)
+    for(let i=7; i<objArr.length;i++){
+    //function Employees (employeeId,fullNaame,department,level,img,salary){
+
+        new Employees(objArr[i].employeeId,objArr[i].fullNaame,objArr[i].department,objArr[i].level,objArr[i].img,objArr[i].salary)
+}
+}
+infoLoop();
+}
+getData();
+
+let employeeForm=document.getElementById("employeeForm")
+    //get data from the form
+    employeeForm.addEventListener("submit",submetListener)
+    function submetListener(event){
+        event.preventDefault();
+        let fullName = event.target.querySelector('#fullName').value;
+        let department = event.target.querySelector('#department').value;
+        let level = event.target.querySelector('#level').value;
+        let imageUrl = event.target.querySelector('#imageUrl').value;
+        let newEmployee = new Employees(generateEmployeeId(), fullName, department, level, imageUrl, null);
+        newEmployee.employeeInformation();
+        saveData(employeesInfo);
+}
+
+
+console.log( "array before LS", employeesInfo)
+function generateEmployeeId() {
+     return Math.floor(Math.random() * (9999 - 1000 + 1)) + 1000;
+ }
+
+
+function infoLoop(){
+for(let i=0;i<employeesInfo.length;i++){
+    employeesInfo[i].employeeInformation();
+}
+}
+
+
