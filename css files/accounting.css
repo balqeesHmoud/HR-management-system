@@ -4,6 +4,16 @@ body {
     margin-top: 80px; 
     padding: 50px;
 }
+#custom-table{
+   
+    border: 1px solid black;
+    width: 450px;
+    height: 250px;
+    margin: 20 auto;
+    text-align: center;
+    padding: 8px;
+
+}
 
 
 header {
@@ -57,7 +67,7 @@ header .accounting {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 100px;
+    height: 40px;
     z-index: 2;
 }
 
